@@ -1,0 +1,24 @@
+#include <stdio.h>
+void ls(int arr[],int len,int item)
+{
+    int i;
+    for(i=0;i<len;i++)
+    {
+        if (arr[i]==item)
+        {
+            printf("%d found at position %d",item,i+1);
+            return;
+        }
+    }
+    printf("Not found\n");
+    
+}
+
+int main() {
+    int arr[]={10,20,30,40,50};
+    int len=sizeof(arr)/sizeof(arr[0]);
+    int item=40;
+    ls(arr,len,item);
+
+    return 0;
+}
